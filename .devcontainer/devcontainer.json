@@ -4,5 +4,5 @@
         "../docker-compose.yml"
     ],
     "service": "node", // docker-compose.yml に記載しているサービス名で起動したいコンテナ
-    "workspaceFolder": "/usr/src/app" // 作業するパス "/workspace"
+    "workspaceFolder": "/usr/src" // 作業するパス "/workspace"
 }
