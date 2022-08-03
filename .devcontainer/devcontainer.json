@@ -1,0 +1,8 @@
+{
+    "name": "node_app", //"Existing Docker Compose (Extend)",
+    "dockerComposeFile": [ // docker-compose.ymlのパスを記載
+        "../docker-compose.yml"
+    ],
+    "service": "node", // docker-compose.yml に記載しているサービス名で起動したいコンテナ
+    "workspaceFolder": "/usr/src/app" // 作業するパス "/workspace"
+}
