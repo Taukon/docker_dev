@@ -1,0 +1,66 @@
+version: '3'
+
+
+services:
+
+  #MySQL用コンテナ
+  mysql:
+
+    container_name: php_mysql
+
+    image: mysql:5.7
+
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+
+    volumes:
+      - ./mysql/var:/var/lib/mysql
+
+
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+
+      - MYSQL_DATABASE=test
+
+      - MYSQL_USER=test
+
+      - MYSQL_PASSWORD=test
+
+      - TZ='Asia/Tokyo'
+
+    ports:
+      - 3306:3306
+
+
+  #phpMyAdmin用コンテナ
+  phpmyadmin:
+
+    container_name: php_phpMyAdmin
+
+    depends_on:
+      - mysql
+
+    image: phpmyadmin/phpmyadmin
+
+    environment:
+
+      PMA_HOST: php_mysql
+
+    ports:
+      - "80:80"
+
+
+  #php用コンテナ
+  php:
+
+    container_name: php-apache
+
+    build: ./php
+
+    volumes:
+      - ./src:/var/www/html
+
+    ports:
+      - 8080:80
+
+    depends_on:
+      - mysql
