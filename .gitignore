@@ -1,2 +1,5 @@
 #ignore mysql/var/
 mysql/var/
+mysql/etc/
+php/php/
+php/apache2/
