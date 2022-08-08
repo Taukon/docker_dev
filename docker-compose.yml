@@ -14,6 +14,7 @@ services:
 
     volumes:
       - ./mysql/var:/var/lib/mysql
+      - ./mysql/etc/my.cnf:/etc/my.cnf
       #- ./mysql/etc/:/etc/mysql
 
 
