@@ -14,7 +14,7 @@ services:
 
     volumes:
       - ./mysql/var:/var/lib/mysql
-      - ./mysql/etc/:/etc/mysql
+      #- ./mysql/etc/:/etc/mysql
 
 
     environment:
@@ -60,7 +60,6 @@ services:
     volumes:
       - ./src:/var/www/html
       - ./php/php:/usr/local/etc/php
-      - ./php/apache2:/etc/apache2
 
     ports:
       - 8080:80
