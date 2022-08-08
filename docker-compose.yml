@@ -59,7 +59,7 @@ services:
 
     volumes:
       - ./src:/var/www/html
-      - ./php/php:/usr/local/etc/php
+     # - ./php/php:/usr/local/etc/php
 
     ports:
       - 8080:80

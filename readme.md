@@ -3,7 +3,6 @@
 ```
 $cd docker_dev
 $mkdir -p mysql/var
-$mkdir -p php/php
 $mkdir src
 
 $docker-compose build
