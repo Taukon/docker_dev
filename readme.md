@@ -13,3 +13,4 @@ $docker-compose up -d
 ---
 * php: php_dev
 * node.js: node_dev
+* web_desktop用の開発: web_desktop_dev
