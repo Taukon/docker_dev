@@ -1,0 +1,8 @@
+{
+    "name": "web_desktop_app",
+    "dockerComposeFile": [
+        "../docker-compose.yml"
+    ],
+    "service": "web_desktop",
+    "workspaceFolder": "/usr/src"
+}

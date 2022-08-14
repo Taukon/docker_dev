@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+
+  web_desktop:
+
+    container_name: web_desktop
+
+    build: ./ubuntu
+
+    environment:
+     
+      - DISPLAY=:1 
+    
+    volumes:
+      - ./src:/usr/src
+
+    ports:
+      - 5900:5900
+    
+    working_dir: /usr/src
+
+    command: Xvfb :1 -screen 0 1280x720x16
